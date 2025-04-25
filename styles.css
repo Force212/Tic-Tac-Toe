@@ -9,19 +9,15 @@ body {
     height: 100vh;
     background-color: #e9cc6f; 
 }
+
 .game-container {
     text-align: center;
     background: #fff;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 95vw; /* Ширина контейнера зависит от ширины экрана */
-    max-width: 100%; /* Максимальная ширина - 100% экрана */
-    height: 100vh; /* Высота контейнера зависит от высоты экрана */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-    overflow: hidden; /* Предотвращаем прокрутку внутри контейнера */
+    max-width: 350px; /* Ограничение ширины контейнера для мобильных устройств */
+    width: 90vw; /* Ширина контейнера зависит от ширины экрана */
 }
 
 header {
@@ -138,22 +134,48 @@ h1 {
     opacity: 1;
 }
 
+
 /* Адаптивность для мобильных устройств */
 @media (max-width: 700px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Занимаем всю высоту экрана */
+        margin: 0;
+        padding: 0;
+    }
+
+    .game-container {
+        max-width: 100%; /* Убираем ограничение ширины */
+        width: 100vw; /* Занимает почти всю ширину экрана */
+        height: 100vh; /* Занимает почти всю высоту экрана */
+        padding: 0px; /* Уменьшаем отступы */
+        overflow: hidden; /* Предотвращаем прокрутку внутри контейнера */
+    }
+
     h1 {
-        font-size: 1.2rem; /* Еще меньше размер заголовка */
+        font-size: 5vw; /* Размер заголовка зависит от ширины экрана */
+        margin-bottom: 20vw; /* Уменьшаем отступ снизу */
+    }
+
+    .board {
+        gap: 2vw; /* Промежуток между ячейками зависит от ширины экрана */
+        padding: 10vw; /* Внутренний отступ */
     }
 
     .cell {
-        font-size: 5vw; /* Размер шрифта зависит от ширины экрана */
+        font-size: 8vw; /* Размер шрифта зависит от ширины экрана */
     }
 
     #status {
-        font-size: 0.9rem; /* Уменьшаем размер текста состояния */
+        font-size: 4vw; /* Размер текста состояния */
+        margin-top: 2vw; /* Уменьшаем отступ сверху */
     }
 
     #restart {
-        font-size: 0.9rem; /* Уменьшаем размер кнопки */
-        padding: 8px 16px;
+        font-size: 4vw; /* Размер кнопки */
+        padding: 2vw 4vw; /* Отступы кнопки */
+        margin-top: 2vw; /* Уменьшаем отступ сверху */
     }
 }

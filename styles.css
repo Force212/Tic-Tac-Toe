@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #e9cc6f; /* Оранжево-бежевый фон */
+    background-color: #e9cc6f; 
 }
 
 .game-container {
@@ -55,9 +55,11 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 колонки */
     gap: 8px; /* Промежуток между ячейками */
-    width: 100%; /* Игровое поле занимает всю доступную ширину */
-    margin: 0 auto;
-}
+    width: 300px; /* Фиксированная ширина игрового поля */
+    max-width: 90%; /* Максимальная ширина для адаптивности */
+    aspect-ratio: 1 / 1; /* Соотношение сторон 1:1 (квадратное поле) */
+    padding: 16px; /* Внутренний отступ */
+  }
 
 .cell {
     width: 100%; /* Каждая ячейка занимает 100% ширины родительского контейнера */

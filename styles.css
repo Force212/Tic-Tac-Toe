@@ -9,16 +9,6 @@ body {
     height: 100vh;
     background-color: #e9cc6f; 
 }
-
-/* .game-container {
-    text-align: center;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 350px; /* Ограничение ширины контейнера для мобильных устройств */
-   /* width: 90vw; /* Ширина контейнера зависит от ширины экрана */
-
 .game-container {
     text-align: center;
     background: #fff;
